@@ -13,7 +13,7 @@ const ActionType = {
 function confirmationModal(message, btnOpen, onActionClicked) {
   const overlayHiddenCssClass = "modal-overlay--hidden";
 
-  const overlayId = "js-modalOverlay-" + Date.now();
+  const overlayId = "js-modalOverlay-" + self.crypto.randomUUID();
 
   this.modalOverlay = null;
   this.btnOpen = btnOpen;
@@ -73,7 +73,7 @@ function confirmationModal(message, btnOpen, onActionClicked) {
     const btnOpenModal2 = $elem("#btnClickMe2");
 
     new confirmationModal(
-      "Are you sure you want to continue?",
+      "Are you sure you want to continue 1?",
       btnOpenModal,
       ({ actionType }) => {
         messageContent.innerHTML = `You just clicked "${actionType}"`;
@@ -81,7 +81,7 @@ function confirmationModal(message, btnOpen, onActionClicked) {
     );
 
     new confirmationModal(
-      "Are you sure you want to continue?",
+      "Are you sure you want to continue 2?",
       btnOpenModal2,
       ({ actionType }) => {
         messageContent.innerHTML = `Btn 2 You just clicked "${actionType}"`;
