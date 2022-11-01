@@ -1,3 +1,13 @@
+.main-content {
+    max-width: 960px;
+    padding: 2rem;
+    margin: auto;
+}
+
+.content-message{
+    margin-top: 2rem;
+}
+
 .modal-overlay {
     position: absolute;
     top:0;
@@ -10,6 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modal-overlay--hidden {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
 }
 
 .modal {
